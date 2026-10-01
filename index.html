@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Portfolio of Franklin Baloco, a BSIT student from the University of Mindanao.">
+	<title>Franklin Baloco | BSIT Portfolio</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="style.css">
+
+	<style>
+		/* VERTICAL LAYOUT */
+		.hero .row,
+		#about .row,
+		#stack .row,
+		#work .row,
+		#contact .row {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.hero .col-lg-8,
+		.hero .col-lg-4,
+		#about .col-lg-5,
+		#about .col-lg-7,
+		#stack .col-lg-5,
+		#stack .col-lg-7,
+		#work .col-lg-5,
+		#work .col-lg-7,
+		#contact .col-lg-5,
+		#contact .col-lg-6 {
+			width: 100%;
+			max-width: 900px;
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+
+		/* Center the main sections */
+		.hero .container,
+		#about .container,
+		#stack .container,
+		#work .container,
+		#contact .container {
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+
+		/* Hero card below the introduction */
+		.hero-card {
+			margin-top: 20px;
+			min-height: 280px;
+		}
+
+		/* About features become vertical */
+		#about .row.mt-5 {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+
+		#about .row.mt-5 > div {
+			width: 100%;
+		}
+
+		/* Stack content */
+		#stack .col-lg-7 > div {
+			width: 100%;
+			margin-bottom: 30px;
+		}
+
+		/* Projects vertical */
+		#work .project {
+			width: 100%;
+			margin-bottom: 15px;
+			text-decoration: none;
+		}
+
+		/* Contact information above the form */
+		#contact .contact-list {
+			width: 100%;
+			margin-bottom: 40px;
+		}
+
+		#contact form {
+			width: 100%;
+		}
+
+		/* Remove Bootstrap horizontal offset */
+		#contact .offset-lg-1 {
+			margin-left: 0 !important;
+		}
+
+		/* Mobile spacing */
+		@media (max-width: 768px) {
+			.hero .container,
+			#about .container,
+			#stack .container,
+			#work .container,
+			#contact .container {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			.section-title {
+				font-size: 2.5rem;
+			}
+
+			.hero h1 {
+				font-size: 4rem;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg fixed-top">
+		<div class="container py-2">
+
+			<a class="navbar-brand" href="#top">
+				<span class="brand-dot"></span>Franklin
+			</a>
+
+			<button class="navbar-toggler border-0"
+				type="button"
+				data-bs-toggle="collapse"
+				data-bs-target="#mainNav"
+				aria-label="Toggle navigation">
+
+				<i class="bi bi-list fs-3"></i>
+			</button>
+
+			<div class="collapse navbar-collapse" id="mainNav">
+				<ul class="navbar-nav ms-auto align-items-lg-center">
+					<li class="nav-item">
+						<a class="nav-link" href="#about">About</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="#stack">Stack</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="#work">Work</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="#contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</nav>
+
+
+	<main id="top">
+
+		<!-- HERO -->
+		<section class="hero">
+			<div class="container">
+
+				<div class="row g-5">
+
+					<div class="col-lg-8 reveal">
+
+						<p class="eyebrow mb-4">
+							BSIT Student / Digital Builder
+						</p>
+
+						<h1>
+							Franklin<br>
+							<span>Baloco</span>
+						</h1>
+
+						<p class="hero-copy mt-4">
+							A curious Information Technology student turning ideas into useful digital experiences through code, design, and a little bit of brave experimentation.
+						</p>
+
+						<div class="d-flex flex-wrap gap-3 mt-4">
+
+							<a href="#work" class="btn solid-btn">
+								Explore my work
+								<i class="bi bi-arrow-up-right ms-2"></i>
+							</a>
+
+							<a href="resume.pdf" class="btn outline-btn" target="_blank" rel="noopener">
+								View Resume
+								<i class="bi bi-eye ms-2"></i>
+							</a>
+
+							<a href="#contact" class="btn outline-btn">
+								Let's connect
+							</a>
+
+						</div>
+
+					</div>
+
+
+					<div class="col-lg-4 reveal">
+
+						<div class="hero-card d-flex flex-column justify-content-between">
+
+							<small>Currently learning</small>
+
+							<div class="initials">
+								FB.
+							</div>
+
+							<div class="d-flex justify-content-between align-items-end">
+
+								<span>
+									Web &amp; App<br>
+									Development
+								</span>
+
+								<i class="bi bi-arrow-down-right fs-3"></i>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="numbered mt-5">
+					SCROLL TO DISCOVER
+					<span class="float-end">01 / 04</span>
+				</div>
+
+			</div>
+		</section>
+
+
+		<!-- ABOUT -->
+		<section id="about" class="reveal">
+
+			<div class="container">
+
+				<div class="row g-5">
+
+					<div class="col-lg-5">
+
+						<p class="eyebrow">
+							01 / About me
+						</p>
+
+						<h2 class="section-title mt-3">
+							Learning by<br>
+							<span>building.</span>
+						</h2>
+
+						<p class="section-intro mt-4">
+							I am Franklin Baloco, a BSIT student at the University of Mindanao. I enjoy understanding how technology works, then using it to make everyday tasks simpler and more engaging.
+						</p>
+
+					</div>
+
+
+					<div class="col-lg-7">
+
+						<div class="about-panel reveal">
+
+							<p class="eyebrow">
+								The short version
+							</p>
+
+							<h3 class="display-font about-heading mt-5">
+								Curious mind.<br>
+								Practical output.
+							</h3>
+
+							<p class="mt-4 mb-0 about-copy">
+								Every project is a chance to learn a new tool, sharpen my problem-solving, and create something that people can actually use.
+							</p>
+
+							<div class="stamp">
+								UM<br>
+								BSIT<br>
+								STUDENT
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<!-- FEATURES VERTICAL -->
+				<div class="row g-4 mt-5">
+
+					<div class="col-md-6 col-lg-3">
+
+						<div class="feature reveal">
+
+							<div class="feature-icon mb-3">
+								<i class="bi bi-lightbulb"></i>
+							</div>
+
+							<h4>Curious</h4>
+
+							<p>
+								I ask questions and keep exploring better ways to solve a problem.
+							</p>
+
+						</div>
+
+					</div>
+
+
+					<div class="col-md-6 col-lg-3">
+
+						<div class="feature reveal">
+
+							<div class="feature-icon mb-3">
+								<i class="bi bi-code-slash"></i>
+							</div>
+
+							<h4>Hands-on</h4>
+
+							<p>
+								I learn fastest when an idea becomes a working interface or application.
+							</p>
+
+						</div>
+
+					</div>
+
+
+					<div class="col-md-6 col-lg-3">
+
+						<div class="feature reveal">
+
+							<div class="feature-icon mb-3">
+								<i class="bi bi-grid-1x2"></i>
+							</div>
+
+							<h4>Intentional</h4>
+
+							<p>
+								I care about clear layouts, readable code, and details that feel considered.
+							</p>
+
+						</div>
+
+					</div>
+
+
+					<div class="col-md-6 col-lg-3">
+
+						<div class="feature reveal">
+
+							<div class="feature-icon mb-3">
+								<i class="bi bi-people"></i>
+							</div>
+
+							<h4>Collaborative</h4>
+
+							<p>
+								I value feedback, shared ideas, and building alongside other people.
+							</p>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+
+		<!-- STACK -->
+		<section id="stack" class="reveal">
+
+			<div class="container">
+
+				<div class="row g-5">
+
+					<div class="col-lg-5">
+
+						<p class="eyebrow">
+							02 / Stack
+						</p>
+
+						<h2 class="section-title mt-3">
+							Tools for<br>
+							<span>making.</span>
+						</h2>
+
+						<p class="section-intro mt-4">
+							The technologies I am studying and using to turn sketches into responsive, useful digital products.
+						</p>
+
+					</div>
+
+
+					<div class="col-lg-7">
+
+						<div class="mb-4">
+
+							<p class="skill-label mb-3">
+								Frontend
+							</p>
+
+							<div class="skill-wrap">
+
+								<span class="skill reveal">HTML</span>
+								<span class="skill reveal">CSS</span>
+								<span class="skill reveal">JavaScript</span>
+								<span class="skill reveal">Bootstrap 5</span>
+
+							</div>
+
+						</div>
+
+
+						<div class="mb-4">
+
+							<p class="skill-label mb-3">
+								Backend &amp; data
+							</p>
+
+							<div class="skill-wrap">
+
+								<span class="skill reveal">PHP</span>
+								<span class="skill reveal">MySQL</span>
+								<span class="skill reveal">REST APIs</span>
+
+							</div>
+
+						</div>
+
+
+						<div>
+
+							<p class="skill-label mb-3">
+								Tools &amp; workflow
+							</p>
+
+							<div class="skill-wrap">
+
+								<span class="skill reveal">Git</span>
+								<span class="skill reveal">GitHub</span>
+								<span class="skill reveal">VS Code</span>
+								<span class="skill reveal">Figma</span>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+
+		<!-- WORK -->
+		<section id="work" class="reveal">
+
+			<div class="container">
+
+				<div class="row g-5">
+
+					<div class="col-lg-5">
+
+						<p class="eyebrow">
+							03 / Selected work
+						</p>
+
+						<h2 class="section-title mt-3">
+							Small steps,<br>
+							<span>real things.</span>
+						</h2>
+
+						<p class="section-intro mt-4">
+							A growing collection of exercises, concepts, and school projects. Each one is a snapshot of what I am learning now.
+						</p>
+
+					</div>
+
+
+					<div class="col-lg-7">
+
+						<a class="project row align-items-center g-3 reveal" href="#contact">
+
+							<div class="col-2 project-number">
+								01
+							</div>
+
+							<div class="col-8">
+
+								<h3>
+									Student Hub
+								</h3>
+
+								<p>
+									A simple campus dashboard for organizing announcements and activities.
+								</p>
+
+							</div>
+
+							<div class="col-2 text-end project-arrow">
+								<i class="bi bi-arrow-up-right"></i>
+							</div>
+
+						</a>
+
+
+						<a class="project row align-items-center g-3 reveal" href="#contact">
+
+							<div class="col-2 project-number">
+								02
+							</div>
+
+							<div class="col-8">
+
+								<h3>
+									Digital Notes
+								</h3>
+
+								<p>
+									A clean, responsive study space for saving and reviewing lessons.
+								</p>
+
+							</div>
+
+							<div class="col-2 text-end project-arrow">
+								<i class="bi bi-arrow-up-right"></i>
+							</div>
+
+						</a>
+
+
+						<a class="project row align-items-center g-3 reveal" href="#contact">
+
+							<div class="col-2 project-number">
+								03
+							</div>
+
+							<div class="col-8">
+
+								<h3>
+									Local Finds
+								</h3>
+
+								<p>
+									A mobile-first directory concept highlighting useful places nearby.
+								</p>
+
+							</div>
+
+							<div class="col-2 text-end project-arrow">
+								<i class="bi bi-arrow-up-right"></i>
+							</div>
+
+						</a>
+
+
+						<a class="project row align-items-center g-3 reveal" href="#contact">
+
+							<div class="col-2 project-number">
+								04
+							</div>
+
+							<div class="col-8">
+
+								<h3>
+									Portfolio 01
+								</h3>
+
+								<p>
+									This personal site: a living record of my progress in IT and design.
+								</p>
+
+							</div>
+
+							<div class="col-2 text-end project-arrow">
+								<i class="bi bi-arrow-up-right"></i>
+							</div>
+
+						</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+
+		<!-- CONTACT -->
+		<section id="contact" class="contact-band reveal">
+
+			<div class="container">
+
+				<div class="row g-5">
+
+					<!-- CONTACT INFORMATION -->
+					<div class="col-lg-5">
+
+						<p class="eyebrow">
+							04 / Contact
+						</p>
+
+						<h2 class="section-title mt-3">
+							Let's make<br>
+							<span>something.</span>
+						</h2>
+
+						<p class="section-intro mt-4">
+							Have an idea, a school project, or just want to connect? Send a message and let us start there.
+						</p>
+
+
+						<div class="contact-list">
+
+							<h3 class="find-me-heading">
+								Find me on
+							</h3>
+
+							<div class="contact-item">
+
+								<div class="contact-icon">
+									<i class="bi bi-github"></i>
+								</div>
+
+								<div class="contact-text">
+
+									<div class="contact-label">
+										GitHub
+									</div>
+
+									<a class="contact-value" href="https://github.com/n3kken" target="_blank" rel="noopener noreferrer">
+										https://github.com/n3kken
+									</a>
+
+								</div>
+
+							</div>
+
+							<div class="contact-item">
+
+								<div class="contact-icon">
+									<i class="bi bi-facebook"></i>
+								</div>
+
+								<div class="contact-text">
+
+									<div class="contact-label">
+										Facebook
+									</div>
+
+									<a class="contact-value" href="https://www.facebook.com/franklinreylausabaloco" target="_blank" rel="noopener noreferrer">
+										https://www.facebook.com/franklinreylausabaloco
+									</a>
+
+								</div>
+
+							</div>
+
+							<div class="contact-item">
+
+								<div class="contact-icon">
+									<i class="bi bi-envelope"></i>
+								</div>
+
+								<div class="contact-text">
+
+									<div class="contact-label">
+										Email
+									</div>
+
+									<div class="contact-value">
+										balocofranklinrey@gmail.com
+									</div>
+
+								</div>
+
+							</div>
+
+
+							<div class="contact-item">
+
+								<div class="contact-icon">
+									<i class="bi bi-geo-alt"></i>
+								</div>
+
+								<div class="contact-text">
+
+									<div class="contact-label">
+										Location
+									</div>
+
+									<div class="contact-value">
+										Digos City, Davao Del Sur
+									</div>
+
+								</div>
+
+							</div>
+
+
+							<div class="contact-item">
+
+								<div class="contact-icon">
+									<i class="bi bi-mortarboard"></i>
+								</div>
+
+								<div class="contact-text">
+
+									<div class="contact-label">
+										School
+									</div>
+
+									<div class="contact-value">
+										University of Mindanao
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+
+					<!-- CONTACT FORM -->
+					<div class="col-lg-6">
+
+						<form onsubmit="event.preventDefault(); document.getElementById('formMessage').textContent='Thanks, Franklin will get back to you soon.'">
+
+							<div class="mb-4">
+
+								<label class="skill-label" for="name" style="color:#b8cbd4">
+									Your name
+								</label>
+
+								<input
+									id="name"
+									class="form-control"
+									type="text"
+									placeholder=""
+									required
+								>
+
+							</div>
+
+
+							<div class="mb-4">
+
+								<label class="skill-label" for="email" style="color:#b8cbd4">
+									Email address
+								</label>
+
+								<input
+									id="email"
+									class="form-control"
+									type="email"
+									placeholder=""
+									required
+								>
+
+							</div>
+
+
+							<div class="mb-4">
+
+								<label class="skill-label" for="message" style="color:#b8cbd4">
+									Message
+								</label>
+
+								<textarea
+									id="message"
+									class="form-control"
+									rows="4"
+									placeholder="Tell me a little about your idea"
+									required
+								></textarea>
+
+							</div>
+
+
+							<button class="btn solid-btn" type="submit">
+
+								Send message
+
+								<i class="bi bi-arrow-up-right ms-2"></i>
+
+							</button>
+
+
+							<p
+								id="formMessage"
+								class="mt-3 mb-0"
+								style="color:var(--yellow)"
+								aria-live="polite">
+							</p>
+
+						</form>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+	</main>
+
+
+	<!-- FOOTER -->
+	<footer>
+
+		<div class="container py-4 d-flex flex-wrap justify-content-between gap-3">
+
+			<span>
+				Franklin Baloco / BSIT
+			</span>
+
+			<span>
+				University of Mindanao &copy; 2026
+			</span>
+
+			<a href="#top">
+				Back to top
+				<i class="bi bi-arrow-up"></i>
+			</a>
+
+		</div>
+
+	</footer>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<script>
+
+		const revealItems = document.querySelectorAll('.reveal');
+
+		const revealObserver = new IntersectionObserver((entries) => {
+
+			entries.forEach((entry) => {
+
+				entry.target.classList.toggle(
+					'is-visible',
+					entry.isIntersecting
+				);
+
+			});
+
+		}, {
+			threshold: 0.18,
+			rootMargin: '0px 0px -8% 0px'
+		});
+
+
+		revealItems.forEach((item) => {
+			revealObserver.observe(item);
+		});
+
+	</script>
+
+</body>
+</html>

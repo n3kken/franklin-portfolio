@@ -1,0 +1,119 @@
+	<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Franklin Baloco - Resume</title>
+	<style>
+		@page { size:A4; margin:14mm; }
+		:root { --ink:#111827; --blue:#244f91; --muted:#506176; --line:#4168a4; }
+		* { box-sizing:border-box; }
+		body {
+			margin:0;
+			background:#eef2f7;
+			color:var(--ink);
+			font-family:Arial, Helvetica, sans-serif;
+			font-size:10.5pt;
+			line-height:1.35;
+		}
+		.resume {
+			width:min(100%, 210mm);
+			min-height:297mm;
+			margin:24px auto;
+			padding:18mm 16mm;
+			background:#fff;
+			box-shadow:0 10px 30px rgba(15, 23, 42, .12);
+		}
+		header { text-align:center; }
+		h1 { margin:0; color:#173f7a; font-size:24pt; letter-spacing:.02em; }
+		.role { margin:5px 0 3px; color:var(--blue); font-size:12pt; font-weight:700; }
+		.contact { margin:0; color:var(--ink); font-size:9.5pt; }
+		section { margin-top:14px; }
+		h2 {
+			margin:0 0 6px;
+			padding-bottom:4px;
+			border-bottom:2px solid var(--line);
+			color:var(--blue);
+			font-size:11.5pt;
+			letter-spacing:.02em;
+			text-transform:uppercase;
+		}
+		p { margin:0; }
+		.summary { text-align:left; }
+		.skills { display:grid; grid-template-columns:1fr 1fr; gap:4px 24px; }
+		.skill-line strong { color:#0f172a; }
+		.entry { margin-top:9px; }
+		.entry:first-of-type { margin-top:0; }
+		.entry-title { font-weight:700; }
+		.entry-meta { margin-top:2px; color:var(--muted); font-size:9.5pt; }
+		ul { margin:4px 0 0 17px; padding:0; }
+		li { margin:3px 0; }
+		.project-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px 22px; }
+		.project h3 { margin:0; font-size:10.5pt; }
+		.project p { margin-top:3px; }
+		@media (max-width:700px) {
+			body { background:#fff; }
+			.resume { width:100%; min-height:0; margin:0; padding:24px 20px; box-shadow:none; }
+			.skills, .project-grid { grid-template-columns:1fr; }
+		}
+		@media print {
+			body { background:#fff; }
+			.resume { width:auto; min-height:0; margin:0; padding:0; box-shadow:none; }
+		}
+	</style>
+</head>
+<body>
+	<main class="resume">
+		<header>
+			<h1>FRANKLIN BALOCO</h1>
+			<p class="role">BSIT Student | Digital Builder</p>
+			<p class="contact">Digos City, Davao del Sur, PH &nbsp;|&nbsp; balocofranklinrey@gmail.com</p>
+		</header>
+
+		<section>
+			<h2>Professional Summary</h2>
+			<p class="summary">Curious Information Technology student at the University of Mindanao who enjoys turning ideas into useful digital experiences through code, design, and practical experimentation. Focused on responsive interfaces, clear layouts, readable code, and building projects that people can actually use.</p>
+		</section>
+
+		<section>
+			<h2>Technical Skills</h2>
+			<div class="skills">
+				<p class="skill-line"><strong>Frontend:</strong> HTML, CSS, JavaScript, Bootstrap 5</p>
+				<p class="skill-line"><strong>Backend &amp; Data:</strong> PHP, MySQL, REST APIs</p>
+				<p class="skill-line"><strong>Tools:</strong> Git, GitHub, VS Code, Figma</p>
+				<p class="skill-line"><strong>Strengths:</strong> Problem-solving, responsive design, collaboration</p>
+			</div>
+		</section>
+
+		<section>
+			<h2>Education</h2>
+			<div class="entry">
+				<p class="entry-title">Bachelor of Science in Information Technology</p>
+				<p class="entry-meta">University of Mindanao &nbsp;|&nbsp; Currently studying</p>
+			</div>
+		</section>
+
+		<section>
+			<h2>Selected Projects</h2>
+			<div class="project-grid">
+				<div class="project">
+					<h3>Student Hub</h3>
+					<p>A campus dashboard concept for organizing announcements and activities.</p>
+				</div>
+				<div class="project">
+					<h3>Digital Notes</h3>
+					<p>A clean responsive study space for saving and reviewing lessons.</p>
+				</div>
+				<div class="project">
+					<h3>Local Finds</h3>
+					<p>A mobile-first directory concept highlighting useful places nearby.</p>
+				</div>
+				<div class="project">
+					<h3>Portfolio 01</h3>
+					<p>A personal site documenting progress in IT, design, and web development.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
